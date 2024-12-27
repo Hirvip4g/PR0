@@ -76,11 +76,11 @@ fun_ajuda() {
         env_msg="╔═━────━▒ ۞ ▒━────━═╗\n"
         env_msg+="<b>--BIENVENIDO -- A INFAME PLUS--</b>\n"
         env_msg+="╚═━────━▒ ۞ ▒━────━═╝\n\n"
-        env_msg+="⚠️ <i>Comandos Disponiveis</i>\n\n"
+        env_msg+="⚠️ <i>Comandos Disponibles</i>\n\n"
         env_msg+="[<b>01</b>] /menu = Exibe menu\n"
         env_msg+="[<b>02</b>] /info = Exibe informacoes\n"
         env_msg+="[<b>03</b>] /ayuda = Informacoes sobre opcoes\n\n"
-        env_msg+="⚠️ <i>Opções Disponiveis</i>\n\n"
+        env_msg+="⚠️ <i>Opciones Disponibles</i>\n\n"
         env_msg+="• <u>CREAR USUARIO</u> = Cria usuario ssh\n\n"
         env_msg+="• <u>CREAR DEMO</u> = Cria teste ssh\n\n"
         env_msg+="• <u>REMOVER</u> = Remove usuario ssh\n\n"
@@ -930,12 +930,12 @@ fun_add_teste() {
 }
 
 fun_teste() {
-    usuario=$(echo Demo#$((RANDOM % +999)))
-    senha='1234'
+    usuario=$(echo Hirvip#$((RANDOM % +999)))
+    senha=$(echo Hirvip#$((RANDOM % +999)))
     limite='1'
     t_time=$1
-    ex_date=$(date '+%d/%m/%C%y' -d " +2 days")
-    tuserdate=$(date '+%C%y/%m/%d' -d " +2 days")
+    ex_date=$(date '+%d/%m/%C%y' -d " +31 days")
+    tuserdate=$(date '+%C%y/%m/%d' -d " +31 days")
     [[ -z $t_time ]] && {
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
             --text "$(echo -e "❌ Erro tente novamente")" \
