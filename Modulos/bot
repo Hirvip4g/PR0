@@ -971,13 +971,13 @@ fun_teste() {
         for arqv in $(ls /root/base.apk); do
             ShellBot.sendDocument --chat_id ${message_from_id[$id]} \
                 --document "@/root/base.apk/$arqv" \
-                --caption "$(echo -e "✅ CREADO CON EXITO ✅\n\n👤USUARIO: <code>$usuario</code>\n🔑CONTRASEÑA: <code>1234</code>\n\n⏳ EXPIRA EL: $t_time $hrs")" \
+                --caption "$(echo -e "✅ CREADO CON EXITO ✅\n\n👤USUARIO: <code>$usuario</code>\n🔑CONTRASEÑA: <code>$senha</code>\n\n⏳ EXPIRA EL: $t_time $hrs")" \
                 --parse_mode html
         done
         return 0
     } || {
         ShellBot.sendMessage --chat_id ${message_chat_id[$id]} \
-            --text "$(echo -e "✅ <b>CREADO CON EXITO</b> ✅\nUSUARIO: <code>$usuario</code>\n🔑CONTRASEÑA: <code>1234</code>\n\n⏳ EXPIRA EN: $t_time $hrs")" \
+            --text "$(echo -e "✅ <b>CREADO CON EXITO</b> ✅\nUSUARIO: <code>$usuario</code>\n🔑CONTRASEÑA: <code>$senha</code>\n\n⏳ EXPIRA EN: 30 dias")" \
             --parse_mode html
         return 0
     }
